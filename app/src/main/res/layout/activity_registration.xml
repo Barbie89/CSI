@@ -14,11 +14,11 @@
         android:layout_height="25dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="97dp"
+        android:layout_marginTop="96dp"
         android:background="#11000000"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/first_name" />
+        android:hint="@string/first_name" />
 
     <EditText
         android:id="@+id/etLastName"
@@ -31,7 +31,7 @@
         android:background="#11000000"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/last_name" />
+        android:hint="@string/last_name" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -44,24 +44,24 @@
         android:background="#11000000"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/email" />
+        android:hint="@string/email" />
 
     <EditText
         android:id="@+id/etConfirmEmail"
         android:layout_width="300dp"
         android:layout_height="25dp"
-        android:layout_alignLeft="@+id/etEmail"
-        android:layout_alignStart="@+id/etEmail"
+        android:layout_alignLeft="@+id/etUsername"
+        android:layout_alignStart="@+id/etUsername"
         android:layout_below="@+id/etEmail"
         android:layout_marginTop="16dp"
         android:background="#11000000"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/confirm_e_mail" />
+        android:hint="@string/confirm_e_mail"/>
 
 
     <EditText
-        android:id="@+id/etuserName"
+        android:id="@+id/etUsername"
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:ems="10"
@@ -71,56 +71,30 @@
         android:layout_marginTop="16dp"
         android:background="#11000000"
         android:inputType="textPersonName"
-        android:text="@string/username"/>
-    <EditText
-        android:id="@+id/etpassWord"
-        android:layout_width="300dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:layout_alignLeft="@+id/etEmail"
-        android:layout_alignStart="@+id/etEmail"
-        android:layout_below="@+id/etuserName"
-        android:layout_marginTop="16dp"
-        android:background="#11000000"
-        android:inputType="textPersonName"
-        android:text="@string/password"/>
-    <EditText
-        android:id="@+id/etConfirmPW"
-        android:layout_width="300dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:layout_alignLeft="@+id/etEmail"
-        android:layout_alignStart="@+id/etEmail"
-        android:layout_below="@+id/etpassWord"
-        android:layout_marginTop="16dp"
-        android:background="#11000000"
-        android:inputType="textPersonName"
-        android:text="@string/confirm_password"/>
+        android:hint="@string/username"/>
 
-    <android.support.v7.widget.CardView
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/etEmail"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_below="@+id/etUsername"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/password" />
+
+    <Button
+        android:id="@+id/btnRegister"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/etConfirmPW"
-        android:layout_marginTop="80dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@android:color/black"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
+        android:layout_marginTop="80dp"
+        android:background="@android:color/black"
+        android:text="@string/register"
+        android:textColor="@android:color/background_light" />
 
-        <RelativeLayout
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/register"
-                android:textColor="#fff"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
 </RelativeLayout>
