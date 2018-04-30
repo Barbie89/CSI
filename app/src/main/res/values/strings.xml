@@ -23,5 +23,5 @@
     <string name="other_info">Location Notes</string>
     <string name="lead_csi">Lead CSI Badge#</string>
     <string name="launch_new">Launch New Case</string>
-    <string name="requiredfields">*RequiredFields</string>
+    <string name="requiredfields">*Required Fields</string>
 </resources>

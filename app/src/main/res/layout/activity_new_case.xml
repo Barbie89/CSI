@@ -29,7 +29,7 @@
         android:layout_marginTop="16dp"
         android:background="#11000000"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:hint="@string/lead_csi" />
     <EditText
         android:id="@+id/etSiteAddress"

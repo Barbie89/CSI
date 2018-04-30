@@ -1,16 +1,18 @@
 package barbapplications.sft;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.android.volley.error.AuthFailureError;
+import com.android.volley.error.VolleyError;
+import com.android.volley.request.StringRequest;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,7 +24,7 @@ public class NewCaseActivity extends AppCompatActivity {
     EditText etCaseName,etLeadCSI,etSiteAddress,etCity,etState,etZipCode,etOtherInfo; //etOtherInfo= Location notes on U.I
     String caseName,lead_csi,siteAddress,city,state,zipCode,other_info;
     AlertDialog.Builder builder;
-    String url="http://csi445.ddns.net/csi/new_case2.php";
+    String url="http://csi445.ddns.net/csi/new_case.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +72,16 @@ public class NewCaseActivity extends AppCompatActivity {
                                 JSONObject jsonObject= jsonArray.getJSONObject(0);
                                 String code= jsonObject.getString("code");
                                 String message= jsonObject.getString("message");
+                                String case_id = jsonObject.getString("case_id");
                                 builder.setTitle("Case Status:");
                                 builder.setMessage(message);
-                                displayAlert(code);
+                                //displayAlert(code);
 
+                                Intent intent = new Intent(NewCaseActivity.this, ImagePreviewActivity.class);
+                                intent.putExtra("case_id", case_id);
+                                startActivity(intent);
+
+                                finish();
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
