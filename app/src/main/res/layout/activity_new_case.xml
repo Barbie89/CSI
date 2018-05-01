@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="barbapplications.sft.NewCaseActivity">
+
+
+    <EditText
+        android:id="@+id/etCaseName"
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/case_name" />
+    <EditText
+        android:id="@+id/etLeadCSI"
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/etCaseName"
+        android:layout_alignStart="@+id/etCaseName"
+        android:layout_below="@+id/etCaseName"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/lead_csi" />
+    <EditText
+        android:id="@+id/etSiteAddress"
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:layout_alignEnd="@+id/etCaseName"
+        android:layout_alignRight="@+id/etCaseName"
+        android:layout_below="@+id/etLeadCSI"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/site_address" />
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/etCaseName"
+        android:layout_alignStart="@+id/etCaseName"
+        android:layout_below="@+id/etSiteAddress"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/city" />
+    <EditText
+        android:id="@+id/etState"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/etCaseName"
+        android:layout_alignStart="@+id/etCaseName"
+        android:layout_below="@+id/etCity"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/state" />
+    <EditText
+        android:id="@+id/etZipCode"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/etCaseName"
+        android:layout_alignStart="@+id/etCaseName"
+        android:layout_below="@+id/etState"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/zip" />
+    <EditText
+        android:id="@+id/etOtherInfo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/etCaseName"
+        android:layout_alignStart="@+id/etCaseName"
+        android:layout_below="@+id/etZipCode"
+        android:layout_marginTop="16dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/other_info" />
+    <Button
+        android:id="@+id/btnLaunchCase"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/etOtherInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/black"
+        android:text="@string/launch_new"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etOtherInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/requiredfields"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

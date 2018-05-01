@@ -15,4 +15,13 @@
     <string name="create_case">Create New Case </string>
     <string name="open_case">Open Existing Case </string>
     <string name="forgot_password">Forgot Password </string>
+    <string name="case_name">Case Name* </string>
+    <string name="site_address">Site Address*</string>
+    <string name="city">City*</string>
+    <string name="state">State*</string>
+    <string name="zip">Zip*</string>
+    <string name="other_info">Location Notes</string>
+    <string name="lead_csi">Lead CSI Badge#</string>
+    <string name="launch_new">Launch New Case</string>
+    <string name="requiredfields">*Required Fields</string>
 </resources>
