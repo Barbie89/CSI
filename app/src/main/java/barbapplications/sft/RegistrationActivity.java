@@ -24,7 +24,7 @@ public class RegistrationActivity extends AppCompatActivity {
     EditText etFirstName, etLastName, etEmail, etConfirmEmail, etUsername, etPassword;
     Button btnRegister;
     AlertDialog.Builder builder;
-    String url="http://csi445.ddns.net/csi/new_user.php";
+    String url="https://csi445.ddns.net/csi/new_user.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
