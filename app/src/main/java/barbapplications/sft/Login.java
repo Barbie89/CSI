@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
     private void Login(){
-        String url="http://csi445.ddns.net/csi/login.php";
+        String url="https://csi445.ddns.net/csi/login.php";
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         StringRequest stringRequest= new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override

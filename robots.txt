@@ -1,0 +1,27 @@
+#The names of the bots are from http://www.botopedia.org/user-agent-list/search-bots
+#More information on how Robot.txt files are made can be found at http://www.robotstxt.org/
+#Made by the CSI group, with the help of Amol-Sone @ github.  
+
+User-agent: googlebot #Google
+Disallow: /csi/ #Prevents google from indexing or searching/gather data to use for search results, from anything in the csi directory.  
+Disallow: /phpmyadmin/ #Prevents google from indexing or searching/gather data to use for search results, from anything in the phpmyadmin directory.  
+
+User-agent: bingbot #Bing
+Disallow: /csi/ #2Prevents bing from indexing or searching/gather data to use for search results, from anything in the csi directory.  
+Disallow: /phpmyadmin/ #Prevents bing from indexing or searching/gather data to use for search results, from aning thing in the phpmyadmin directory.  
+
+User-agent: Slurp #Yahoo
+Disallow: /csi/ #Prevents Yahoo from indexing or searching/gather data to use for search results, from anything in the csi directory.  
+Disallow: /phpmyadmin/ #Prevents Yahoo from indexing or searching/gather data to use for search results, from anything in the phpmyadmin directory.  
+
+User-agent: Psbot #Picsearch picture search engine.  
+Disallow: /csi/ #Prevents Picsearch from searching/gather data to use for search results, from anything in the csi directory.  
+
+User-agent: archive.org_bot #WayBack Machine.  Only to be allowed to look at the homepage that is all.  
+Disallow: /csi/   #This bot will not be allowed to look at anything in the csi direcotry.  
+Disallow: /phpmyadmin/ #This bot will not be allowed to look at anything in the phpmyadmin directory.  
+Disallow: /add_vhost.php #This bot will not be able to view add_vhost.php
+
+User-agent:  *  # Any other web robot or web crawler will have to folllow the following rule.  
+Disallow: / #The bots that do not fall in the other categories will not be able to look at the website.  
+

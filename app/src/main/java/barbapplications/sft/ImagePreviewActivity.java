@@ -66,7 +66,7 @@ public class ImagePreviewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // send image and comment to the server here
-                String url = "http://csi445.ddns.net/csi/new_case_image.php";
+                String url = "https://csi445.ddns.net/csi/new_case_image.php";
                 SimpleMultiPartRequest smr = new SimpleMultiPartRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
