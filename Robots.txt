@@ -1,4 +1,5 @@
-#The names of the bots where gathered from http://www.botopedia.org/user-agent-list/search-bots
+#The names of the bots are from http://www.botopedia.org/user-agent-list/search-bots
+#More information on how Robot.txt files are made can be found at http://www.robotstxt.org/
 #Made by the CSI group, with the help of Amol-Sone @ github.  
 
 User-agent: googlebot #Google
