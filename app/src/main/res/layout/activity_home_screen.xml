@@ -27,7 +27,10 @@
         android:background="@android:color/black"
         android:text="@string/create_case"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        />
 
     <android.support.v7.widget.CardView
         android:layout_width="250dp"
