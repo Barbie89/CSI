@@ -24,7 +24,7 @@ public class NewCaseActivity extends AppCompatActivity {
     EditText etCaseName,etLeadCSI,etSiteAddress,etCity,etState,etZipCode,etOtherInfo; //etOtherInfo= Location notes on U.I
     String caseName,lead_csi,siteAddress,city,state,zipCode,other_info;
     AlertDialog.Builder builder;
-    String url="http://csi445.ddns.net/csi/new_case.php";
+    String url="http://csi445.ddns.net/csi/new_case1.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

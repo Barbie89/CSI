@@ -17,14 +17,14 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
     Button btnRegisterHere, btnLogin;
-    EditText etuserName,etpassWord;
+    EditText etbadge,etpassWord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //
-        etuserName= (EditText) findViewById(R.id.etUsername);
+        etbadge= (EditText) findViewById(R.id.etbadge);
         etpassWord= (EditText) findViewById(R.id.etPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegisterHere = (Button) findViewById(R.id.btnRegisterHere);
@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
     private void Login(){
-        String url="http://csi445.ddns.net/csi/login.php";
+        String url="https://csi445.ddns.net/csi/login.php";
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         StringRequest stringRequest= new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -74,8 +74,8 @@ public class Login extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
-                params.put("Username", etuserName.getText().toString().trim());
-                params.put("Password", etpassWord.getText().toString().trim());
+                params.put("badgeNo", etbadge.getText().toString().trim()); /// key must match in php
+                params.put("password", etpassWord.getText().toString().trim());
                 return params;
             }
         };

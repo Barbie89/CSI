@@ -8,7 +8,7 @@
     tools:context="barbapplications.sft.Login">
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etbadge"
         android:layout_width="200dp"
         android:layout_height="20dp"
         android:layout_centerHorizontal="true"
@@ -17,7 +17,7 @@
         android:drawableLeft="@drawable/ic_action_user"
         android:drawableStart="@drawable/ic_action_user"
         android:ems="10"
-        android:hint="@string/username"
+        android:hint="@string/badgeNo"
         android:inputType="textPersonName"
 
         android:textSize="16sp" />
@@ -26,9 +26,9 @@
         android:id="@+id/etPassword"
         android:layout_width="200dp"
         android:layout_height="20dp"
-        android:layout_alignLeft="@+id/etUsername"
-        android:layout_alignStart="@+id/etUsername"
-        android:layout_below="@+id/etUsername"
+        android:layout_alignLeft="@+id/etbadge"
+        android:layout_alignStart="@+id/etbadge"
+        android:layout_below="@+id/etbadge"
         android:layout_marginTop="38dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_pass"

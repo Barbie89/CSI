@@ -50,18 +50,18 @@
         android:id="@+id/etConfirmEmail"
         android:layout_width="300dp"
         android:layout_height="25dp"
-        android:layout_alignLeft="@+id/etUsername"
-        android:layout_alignStart="@+id/etUsername"
+        android:layout_alignLeft="@+id/etEmail"
+        android:layout_alignStart="@+id/etEmail"
         android:layout_below="@+id/etEmail"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:background="#11000000"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/confirm_e_mail"/>
+        android:hint="@string/confirm_e_mail"
+        android:inputType="textPersonName" />
 
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etBadge"
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:ems="10"
@@ -71,7 +71,7 @@
         android:layout_marginTop="16dp"
         android:background="#11000000"
         android:inputType="textPersonName"
-        android:hint="@string/username"/>
+        android:hint="@string/badgeNo" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -79,7 +79,7 @@
         android:layout_height="25dp"
         android:layout_alignLeft="@+id/etEmail"
         android:layout_alignStart="@+id/etEmail"
-        android:layout_below="@+id/etUsername"
+        android:layout_below="@+id/etBadge"
         android:layout_marginTop="16dp"
         android:background="#11000000"
         android:ems="10"

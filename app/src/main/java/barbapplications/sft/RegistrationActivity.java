@@ -20,11 +20,11 @@ import org.json.JSONObject;
 import java.util.Map;
 
 public class RegistrationActivity extends AppCompatActivity {
-    String fName, lName, email, cEmail, username, password;
-    EditText etFirstName, etLastName, etEmail, etConfirmEmail, etUsername, etPassword;
+    String fName, lName, email, cEmail, badgeNo, password;
+    EditText etFirstName, etLastName, etEmail, etConfirmEmail, etBadge, etPassword;
     Button btnRegister;
     AlertDialog.Builder builder;
-    String url="http://csi445.ddns.net/csi/new_user.php";
+    String url="https://csi445.ddns.net/csi/new_user.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class RegistrationActivity extends AppCompatActivity {
         etLastName = (EditText) findViewById(R.id.etLastName);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etConfirmEmail = (EditText) findViewById(R.id.etConfirmEmail);
-        etUsername = (EditText) findViewById(R.id.etUsername);
+        etBadge = (EditText) findViewById(R.id.etBadge);
         etPassword = (EditText) findViewById(R.id.etPassword);
         // initialize button
         btnRegister = (Button) findViewById(R.id.btnRegister);
@@ -49,10 +49,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 lName= etLastName.getText().toString();
                 email=etEmail.getText().toString();
                 cEmail=etConfirmEmail.getText().toString();
-                username=etUsername.getText().toString();
+                badgeNo=etBadge.getText().toString();
+
+
+
                 password= etPassword.getText().toString();
 
-                if (fName.equals("") || lName.equals("") || email.equals("") || cEmail.equals("") || username.equals("") || password.equals("")) {
+                if (fName.equals("") || lName.equals("") || email.equals("") || cEmail.equals("") || badgeNo.equals("") || password.equals("")) {
                     builder = new AlertDialog.Builder(RegistrationActivity.this);
                     builder.setTitle("Fields Missing:");
                     builder.setMessage("Fill in all fields.");
@@ -96,7 +99,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             params.put("fname", fName);
                             params.put("lname",lName);
                             params.put("email",email);
-                            params.put("username",username);
+                            params.put("badgeNo",badgeNo);
                             params.put("password",password);
                             return params;
                         }
@@ -125,7 +128,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 else if (code.equals("reg_failed")){
                     etFirstName.setText("");
                     etLastName.setText("");
-                    etUsername.setText("");
+                    etBadge.setText("");
                     etPassword.setText("");
                     etEmail.setText("");
                     etConfirmEmail.setText("");

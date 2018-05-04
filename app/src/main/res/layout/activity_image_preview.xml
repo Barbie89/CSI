@@ -28,7 +28,7 @@
             android:id="@+id/buttonSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"/>
+            android:text="Save"/>
 
         <Button
             android:id="@+id/buttonDone"
