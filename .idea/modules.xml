@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSI.iml" filepath="$PROJECT_DIR$/CSI.iml" />
-      <module fileurl="file://C:\Users\mlbig\AndroidStudioProjects\CSI\SFT.iml" filepath="C:\Users\mlbig\AndroidStudioProjects\CSI\SFT.iml" />
+      <module fileurl="file://C:/Users/mlbig/AndroidStudioProjects/CSI/SFT.iml" filepath="C:/Users/mlbig/AndroidStudioProjects/CSI/SFT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\mlbig\AndroidStudioProjects\CSI\app\app.iml" filepath="C:\Users\mlbig\AndroidStudioProjects\CSI\app\app.iml" />
+      <module fileurl="file://C:/Users/mlbig/AndroidStudioProjects/CSI/app/app.iml" filepath="C:/Users/mlbig/AndroidStudioProjects/CSI/app/app.iml" />
     </modules>
   </component>
 </project>

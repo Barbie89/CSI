@@ -21,10 +21,10 @@ import java.util.Map;
 
 public class NewCaseActivity extends AppCompatActivity {
     Button btnLaunchCase;
-    EditText etCaseName,etLeadCSI,etSiteAddress,etCity,etState,etZipCode,etOtherInfo; //etOtherInfo= Location notes on U.I
-    String caseName,lead_csi,siteAddress,city,state,zipCode,other_info;
+    EditText etCaseName,etBadgeNo,etSiteAddress,etCity,etState,etZipCode,etOtherInfo; //etOtherInfo= Location notes on U.I
+    String caseName,badgeNo,siteAddress,city,state,zipCode,other_info;
     AlertDialog.Builder builder;
-    String url="http://csi445.ddns.net/csi/new_case1.php";
+    String url="https://csi445.ddns.net/csi/new_case.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class NewCaseActivity extends AppCompatActivity {
         btnLaunchCase = (Button)findViewById(R.id.btnLaunchCase);
         // initialize all edit text variables
         etCaseName=(EditText) findViewById(R.id.etCaseName);
-        etLeadCSI=(EditText) findViewById(R.id.etLeadCSI);
+        etBadgeNo=(EditText) findViewById(R.id.etBadgeNo); ////badgeNo
         etSiteAddress=(EditText) findViewById(R.id.etSiteAddress);
         etCity=(EditText) findViewById(R.id.etCity);
         etState=(EditText) findViewById(R.id.etState);
@@ -49,7 +49,7 @@ public class NewCaseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //fetch the info from the new case form
                 caseName = etCaseName.getText().toString();
-                lead_csi = etLeadCSI.getText().toString();
+                badgeNo = etBadgeNo.getText().toString();
                 siteAddress = etSiteAddress.getText().toString();
                 city = etCity.getText().toString();
                 state = etState.getText().toString();
@@ -98,7 +98,7 @@ public class NewCaseActivity extends AppCompatActivity {
                         protected Map<String, String> getParams() throws AuthFailureError {
                             Map<String,String> params= new HashMap<>();
                             params.put("caseName", caseName);
-                            params.put("lead_csi",lead_csi);
+                            params.put("badgeNo",badgeNo); /// badgeNo
                             params.put("siteAddress",siteAddress);
                             params.put("city",city);
                             params.put("state",state);
@@ -126,7 +126,7 @@ public class NewCaseActivity extends AppCompatActivity {
                 }
                 else if (code.equals("case_exists")){
                     etCaseName.setText("");
-                    etLeadCSI.setText("");
+                    etBadgeNo.setText("");
                     etSiteAddress.setText("");
                     etCity.setText("");
                     etState.setText("");

@@ -5,8 +5,12 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+
 import java.util.HashMap;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -19,8 +23,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.Map;
 
-public class RegistrationActivity extends AppCompatActivity {
-    String fName, lName, email, cEmail, badgeNo, password;
+public class RegistrationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    String fName, lName, email, cEmail, badgeNo, password,userType;
     EditText etFirstName, etLastName, etEmail, etConfirmEmail, etBadge, etPassword;
     Button btnRegister;
     AlertDialog.Builder builder;
@@ -41,6 +45,13 @@ public class RegistrationActivity extends AppCompatActivity {
         btnRegister = (Button) findViewById(R.id.btnRegister);
         // initialize builder
         builder = new AlertDialog.Builder(RegistrationActivity.this);
+        //initialize spinner
+        Spinner spinner= findViewById(R.id.spUserType);
+        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this, R.array.userType, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,9 +61,6 @@ public class RegistrationActivity extends AppCompatActivity {
                 email=etEmail.getText().toString();
                 cEmail=etConfirmEmail.getText().toString();
                 badgeNo=etBadge.getText().toString();
-
-
-
                 password= etPassword.getText().toString();
 
                 if (fName.equals("") || lName.equals("") || email.equals("") || cEmail.equals("") || badgeNo.equals("") || password.equals("")) {
@@ -101,6 +109,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             params.put("email",email);
                             params.put("badgeNo",badgeNo);
                             params.put("password",password);
+                            params.put("userType",userType);
                             return params;
                         }
                     };
@@ -144,6 +153,18 @@ public class RegistrationActivity extends AppCompatActivity {
         });
         AlertDialog alertDialog= builder.create();
         alertDialog.show();
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
+        userType= parent.getItemAtPosition(position).toString();
+
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }

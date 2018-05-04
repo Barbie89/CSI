@@ -20,7 +20,7 @@
         android:inputType="textPersonName"
         android:hint="@string/case_name" />
     <EditText
-        android:id="@+id/etLeadCSI"
+        android:id="@+id/etBadgeNo"
         android:layout_width="320dp"
         android:layout_height="25dp"
         android:layout_alignLeft="@+id/etCaseName"
@@ -30,14 +30,14 @@
         android:background="#11000000"
         android:ems="10"
         android:inputType="number"
-        android:hint="@string/lead_csi" />
+        android:hint="@string/badgeNo" />
     <EditText
         android:id="@+id/etSiteAddress"
         android:layout_width="320dp"
         android:layout_height="25dp"
         android:layout_alignEnd="@+id/etCaseName"
         android:layout_alignRight="@+id/etCaseName"
-        android:layout_below="@+id/etLeadCSI"
+        android:layout_below="@+id/etBadgeNo"
         android:layout_marginTop="16dp"
         android:background="#11000000"
         android:ems="10"
