@@ -65,10 +65,7 @@ public class ImagePreviewActivity extends AppCompatActivity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // if(mCurrentPhotoPath == null){
-                 //   Toast.makeText(ImagePreviewActivity.this, "Take a picture first", Toast.LENGTH_SHORT);
-                  //  return;
-             //   }
+
                 // send image and comment to the server here
                 String url = "http://csi445.ddns.net/csi/new_case_image.php";
                 SimpleMultiPartRequest smr = new SimpleMultiPartRequest(Request.Method.POST, url,

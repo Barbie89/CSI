@@ -158,10 +158,9 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
-        userType= parent.getItemAtPosition(position).toString();
+        String result= parent.getItemAtPosition(position).toString();
 
-
-    }
+            }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {

@@ -24,6 +24,7 @@
     <string name="lead_csi">Lead CSI Badge#</string>
     <string name="launch_new">Launch New Case</string>
     <string name="requiredfields">*Required Fields</string>
+    <string name="request_permission">This sample needs camera permission.</string>
 
     <string-array name="userType">
         <item>Sender </item>

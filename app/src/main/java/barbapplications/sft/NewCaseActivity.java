@@ -30,12 +30,11 @@ public class NewCaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_case);
-
         // initialize button
         btnLaunchCase = (Button)findViewById(R.id.btnLaunchCase);
         // initialize all edit text variables
         etCaseName=(EditText) findViewById(R.id.etCaseName);
-        etBadgeNo=(EditText) findViewById(R.id.etBadgeNo); ////badgeNo
+        etBadgeNo=(EditText) findViewById(R.id.etBadgeNo);
         etSiteAddress=(EditText) findViewById(R.id.etSiteAddress);
         etCity=(EditText) findViewById(R.id.etCity);
         etState=(EditText) findViewById(R.id.etState);
@@ -77,6 +76,8 @@ public class NewCaseActivity extends AppCompatActivity {
                                 builder.setMessage(message);
                                 //displayAlert(code);
 
+
+
                                 Intent intent = new Intent(NewCaseActivity.this, ImagePreviewActivity.class);
                                 intent.putExtra("case_id", case_id);
                                 startActivity(intent);
@@ -98,7 +99,7 @@ public class NewCaseActivity extends AppCompatActivity {
                         protected Map<String, String> getParams() throws AuthFailureError {
                             Map<String,String> params= new HashMap<>();
                             params.put("caseName", caseName);
-                            params.put("badgeNo",badgeNo); /// badgeNo
+                            params.put("badgeNo",badgeNo);
                             params.put("siteAddress",siteAddress);
                             params.put("city",city);
                             params.put("state",state);
