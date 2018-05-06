@@ -45,6 +45,10 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    public void openReceiverActivity(){
+        Intent intent= new Intent(this,ReceiverActivity.class);
+        startActivity(intent);
+    }
     public void openHomeScreen(){
         Intent intent= new Intent(this,HomeScreenActivity.class);
         startActivity(intent);
@@ -54,17 +58,27 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
     private void Login(){
-        String url="https://csi445.ddns.net/csi/login.php";
+        String url="https://csi445.ddns.net/csi/loginUserType.php";
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         StringRequest stringRequest= new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if( response.trim().equals("success") ){
+                ///changes start
+                if( response.trim().equals("unsuccessful") ){Toast.makeText(getApplicationContext(),"Login Failed", Toast.LENGTH_SHORT).show();}
+                else{
+                try {
+                    JSONArray jsonArray= new JSONArray(response);
+                    JSONObject jsonObject= jsonArray.getJSONObject(0);
+                    String userType= jsonObject.getString("userType");
                     Toast.makeText(getApplicationContext(),"Logged In", Toast.LENGTH_SHORT).show();
-                    openHomeScreen();
-                }
-                else
-                    Toast.makeText(getApplicationContext(),"Login Failed", Toast.LENGTH_SHORT).show();
+                    if(userType.equalsIgnoreCase("Sender")){
+                    openHomeScreen();}
+                    else{
+                        openReceiverActivity();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } }
 
             }
         }, new Response.ErrorListener() {
