@@ -11,19 +11,30 @@ import kotlinx.android.synthetic.main.activity_home_screen.*
 
 
 class HomeScreenActivity : AppCompatActivity() {
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
 
-        btnOpenCaseMenu.setOnClickListener {
-            val popup= PopupMenu(this,btnOpenCaseMenu)
-            popup.inflate(R.menu.case_menu)
-            popup.setOnMenuItemClickListener {
-                Toast.makeText(this, it.title, Toast.LENGTH_SHORT).show()
-                true
-            }
-            popup.show()
+        //new stuff
+       val kBadgeNo= intent.getStringExtra("kBadgeNo")
+
+
+        //new stuff
+
+
+        btnOpenCases.setOnClickListener {
+            val intent = Intent (this,ExistingCases:: class.java)
+            intent.putExtra(kBadgeNo,kBadgeNo)
+            startActivity(intent)
+
+
         }
+
+        ////new stuff
 
         val CreateCase:Button = findViewById(R.id.btnCreateCase)
         CreateCase.setOnClickListener{

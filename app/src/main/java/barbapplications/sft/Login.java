@@ -21,6 +21,9 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
     Button btnRegisterHere, btnLogin;
     EditText etbadge,etpassWord;
+    String carryBadgeNo;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,7 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Login();
+                login();
             }
         });
         btnRegisterHere.setOnClickListener(new View.OnClickListener() {
@@ -50,27 +53,37 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
     public void openHomeScreen(){
-        Intent intent= new Intent(this,HomeScreenActivity.class);
+       //uncomment to revert Intent intent= new Intent(this,HomeScreenActivity.class);
+
+        // new stuff
+        Intent intent = new Intent(this, HomeScreenActivity.class);
+        intent.putExtra("kBadgeNo", carryBadgeNo);
+
+
+        //new stuff
+
+
         startActivity(intent);
     }
     public void openRegistration(){
         Intent intent= new Intent(this,RegistrationActivity.class);
         startActivity(intent);
     }
-    private void Login(){
-        String url="https://csi445.ddns.net/csi/loginUserType.php";
+    private void login(){
+        String url="https://csi445.ddns.net/csi/login_type_id.php";
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         StringRequest stringRequest= new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                ///changes start
                 if( response.trim().equals("unsuccessful") ){Toast.makeText(getApplicationContext(),"Login Failed", Toast.LENGTH_SHORT).show();}
                 else{
                 try {
                     JSONArray jsonArray= new JSONArray(response);
                     JSONObject jsonObject= jsonArray.getJSONObject(0);
                     String userType= jsonObject.getString("userType");
+                    carryBadgeNo= jsonObject.getString("badgeNo");
                     Toast.makeText(getApplicationContext(),"Logged In", Toast.LENGTH_SHORT).show();
+
                     if(userType.equalsIgnoreCase("Sender")){
                     openHomeScreen();}
                     else{

@@ -32,31 +32,19 @@
         android:textStyle="bold"
         />
 
-    <android.support.v7.widget.CardView
+    <Button
+        android:id="@+id/btnOpenCases"
         android:layout_width="250dp"
         android:layout_height="50dp"
-
-        app:cardElevation="10dp"
-        app:cardBackgroundColor="@android:color/black"
         android:layout_below="@+id/btnCreateCase"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/btnOpenCaseMenu">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/open_case"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#fff"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+        android:layout_marginTop="80dp"
+        android:background="@android:color/black"
+        android:text="@string/open_case"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        />
 
 </RelativeLayout>
