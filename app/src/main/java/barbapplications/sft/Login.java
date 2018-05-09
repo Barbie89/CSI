@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Login extends AppCompatActivity {
-    Button btnRegisterHere, btnLogin;
+    Button btnRegisterHere, btnLogin,btnForgot;
     EditText etbadge,etpassWord;
     String carryBadgeNo;
 
@@ -34,6 +34,13 @@ public class Login extends AppCompatActivity {
         etpassWord= (EditText) findViewById(R.id.etPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegisterHere = (Button) findViewById(R.id.btnRegisterHere);
+        btnForgot = (Button) findViewById(R.id.btnForgotPW);
+        btnForgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v3) {
+                Toast.makeText(getApplicationContext(),"Contact Adminstrator", Toast.LENGTH_LONG).show();
+            }
+        });
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,9 +117,6 @@ public class Login extends AppCompatActivity {
             }
         };
         requestQueue.add(stringRequest);
-
-
-
     }
 }
 

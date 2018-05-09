@@ -35,6 +35,7 @@ import java.util.Map;
 
 
 public class ImagePreviewActivity extends AppCompatActivity {
+    public final static int IMAGE_PREVIEW_REQUEST_CODE = 0;
 
     static final int REQUEST_TAKE_PHOTO = 1;
     static final int REQUEST_CAMERA_PERMISSION = 3;
@@ -57,6 +58,7 @@ public class ImagePreviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_image_preview);
 
         mCaseID = getIntent().getStringExtra("case_id");
+        Toast.makeText(this, mCaseID, Toast.LENGTH_SHORT).show();
 
         imageView = (ImageView) findViewById(R.id.imageView);
         editComment = (EditText) findViewById(R.id.editComment);

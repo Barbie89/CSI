@@ -19,7 +19,6 @@
         android:ems="10"
         android:hint="@string/badgeNo"
         android:inputType="textPersonName"
-
         android:textSize="16sp" />
 
     <EditText

@@ -2,19 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tv1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".ExistingCases">
 
-
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="147dp"
-        android:layout_height="65dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="246dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/caseList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>
