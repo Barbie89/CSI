@@ -36,15 +36,6 @@ public class ExistingCases extends AppCompatActivity implements CaseListAdapter.
         setContentView(R.layout.activity_existing_cases);
         badgeNo = getIntent().getStringExtra("kBadgeNo");
 
-        //Testing
-//        ArrayList caseIDs = new ArrayList<>();
-//        caseIDs.add(new CaseID(1050));
-//        caseIDs.add(new CaseID(2));
-//        caseIDs.add(new CaseID(3));
-//        showCases(caseIDs);
-
-        //TODO get list of case numbers. Then do caseNumbers = list
-
     }
 
     @Override

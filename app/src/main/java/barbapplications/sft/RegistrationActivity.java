@@ -135,8 +135,8 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
                     //finish();
                 }
                 else if (code.equals("reg_failed")){
-                    etFirstName.setText("");
-                    etLastName.setText("");
+                    //etFirstName.setText("");
+                    //etLastName.setText("");
                     etBadge.setText("");
                     etPassword.setText("");
                     etEmail.setText("");

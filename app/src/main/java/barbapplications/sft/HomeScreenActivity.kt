@@ -12,18 +12,10 @@ import kotlinx.android.synthetic.main.activity_home_screen.*
 
 class HomeScreenActivity : AppCompatActivity() {
     private var badgeNo: String? = null
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
         badgeNo= intent.getStringExtra("kBadgeNo")
-
-
-        //new stuff
-
-
         btnOpenCases.setOnClickListener {
             val intent = Intent (this,ExistingCases:: class.java)
             intent.putExtra("kBadgeNo", badgeNo)
@@ -31,9 +23,6 @@ class HomeScreenActivity : AppCompatActivity() {
 
 
         }
-
-        ////new stuff
-
         val CreateCase:Button = findViewById(R.id.btnCreateCase)
         CreateCase.setOnClickListener{
             val intent = Intent (this,NewCaseActivity:: class.java)
